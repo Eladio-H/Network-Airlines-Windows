@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="screen" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="444.0" prefWidth="600.0" style="-fx-background-color: #B9D9EB;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.networkairlines.SettingsController">
+   <children>
+      <Label alignment="CENTER" layoutX="120.0" layoutY="14.0" prefHeight="37.0" prefWidth="361.0" style="-fx-text-fill: #F4B266; -fx-background-color: #2F6690; -fx-background-radius: 20;" text="Change how you make your data fly." textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="138.0" layoutY="53.0" text="You can change the parameters on which your data flies." textFill="#114162">
+         <font>
+            <Font size="13.0" />
+         </font></Label>
+      <Button layoutX="218.0" layoutY="352.0" mnemonicParsing="false" onAction="#onContinue" prefHeight="61.0" prefWidth="164.0" style="-fx-background-radius: 10; -fx-background-color: #2F6690; -fx-text-fill: #F4B266;" text="Save and Back">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Button>
+      <TextField fx:id="fName" layoutX="131.0" layoutY="79.0" style="-fx-background-radius: 10;" />
+      <TextField fx:id="lName" layoutX="387.0" layoutY="79.0" style="-fx-background-radius: 10;" />
+      <Label alignment="CENTER" layoutX="45.0" layoutY="79.0" prefHeight="25.0" prefWidth="79.0" style="-fx-text-fill: #F4B266; -fx-background-color: #2F6690; -fx-background-radius: 20;" text="First name">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font></Label>
+      <Label alignment="CENTER" layoutX="300.0" layoutY="79.0" prefHeight="25.0" prefWidth="79.0" style="-fx-text-fill: #F4B266; -fx-background-color: #2F6690; -fx-background-radius: 20;" text="Last name">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font></Label>
+      <Label layoutX="45.0" layoutY="118.0" text="Name of organisation (optional):" textFill="#114162" />
+      <Label layoutX="45.0" layoutY="149.0" text="Department (optional):" textFill="#114162" />
+      <TextField fx:id="orgName" layoutX="236.0" layoutY="114.0" style="-fx-background-radius: 10;" />
+      <TextField fx:id="depName" layoutX="236.0" layoutY="145.0" style="-fx-background-radius: 10;" />
+      <Label alignment="CENTER" layoutX="45.0" layoutY="192.0" prefHeight="27.0" prefWidth="302.0" style="-fx-text-fill: #F4B266; -fx-background-color: #2F6690; -fx-background-radius: 20;" text="File location for your data terminal" wrapText="true">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font></Label>
+      <Button fx:id="directoryChooser" layoutX="394.0" layoutY="180.0" mnemonicParsing="false" onAction="#selectDirectory" prefHeight="51.0" prefWidth="142.0" style="-fx-background-radius: 10; -fx-background-color: #2F6690; -fx-text-fill: #F4B266;" text="Choose directory">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Button>
+      <Label fx:id="directory" alignment="CENTER" contentDisplay="CENTER" layoutX="382.0" layoutY="233.0" prefHeight="17.0" prefWidth="142.0" textAlignment="CENTER" textFill="#114162" />
+      <Label fx:id="errorMess" alignment="CENTER" layoutX="181.0" layoutY="419.0" prefHeight="17.0" prefWidth="238.0" text="Make sure to fill in all the required fields" textFill="RED" visible="false" />
+      <Button fx:id="cancel" layoutX="16.0" layoutY="400.0" mnemonicParsing="false" onAction="#onCancelClick" style="-fx-background-radius: 10; -fx-background-color: #2F6690; -fx-text-fill: #F4B266;" text="Cancel">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Button>
+      <ImageView fitHeight="88.0" fitWidth="149.0" layoutX="256.0" layoutY="238.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/airplane.png" />
+         </image>
+      </ImageView>
+   </children>
+</Pane>

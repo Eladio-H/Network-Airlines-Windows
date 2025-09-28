@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="screen" alignment="TOP_CENTER" prefHeight="700.0" prefWidth="550.0" spacing="20.0" style="-fx-background-color: #B9D9EB; -fx-border-radius: 20;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.networkairlines.StartController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <Pane prefHeight="109.0" prefWidth="510.0" style="-fx-background-color: #2F6690; -fx-background-radius: 30;">
+      <children>
+      
+                <Label fx:id="title" alignment="CENTER" layoutX="113.0" layoutY="21.0" text="Network Airlines" textAlignment="CENTER" textFill="#f4b266">
+            <font>
+               <Font name="System Bold" size="36.0" />
+            </font>
+         </Label>
+         <Label alignment="CENTER" contentDisplay="CENTER" layoutX="125.0" layoutY="62.0" prefHeight="35.0" prefWidth="261.0" text="The choice of champions." textAlignment="CENTER" textFill="#f4b266">
+            <font>
+               <Font name="System Italic" size="14.0" />
+            </font>
+         </Label>
+      </children>
+   </Pane>
+   <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@images/airplane.png" />
+      </image>
+   </ImageView>
+   <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="45.0" prefWidth="505.0" style="-fx-background-color: #2F6690; -fx-background-radius: 20;" text="Network Airlines doesn't give you wings. It gives you a fighter jet." textAlignment="CENTER" textFill="#f4b266" wrapText="true">
+      <font>
+         <Font name="System Bold Italic" size="14.0" />
+      </font>
+   </Label>
+   <ImageView fx:id="start" fitHeight="178.0" fitWidth="178.0" onMouseClicked="#onStartButtonClick" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@images/start.png" />
+      </image>
+      <VBox.margin>
+         <Insets />
+      </VBox.margin>
+   </ImageView>
+   <HBox alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="84.0" prefWidth="427.0" spacing="60.0" style="-fx-border-width: 5; -fx-background-color: #2F6690; -fx-background-radius: 30;">
+      <children>
+         <ImageView fx:id="info" fitHeight="51.0" fitWidth="55.0" onMouseClicked="#onInfoButtonClick" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@images/information.png" />
+            </image>
+         </ImageView>
+         <ImageView fx:id="settings" fitHeight="52.0" fitWidth="52.0" onMouseClicked="#onSettingsButtonClick" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@images/gear.png" />
+            </image>
+         </ImageView>
+         <ImageView fx:id="quit" fitHeight="53.0" fitWidth="53.0" onMouseClicked="#onQuitClick" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@images/power-switch.png" />
+            </image>
+         </ImageView>
+      </children>
+      <padding>
+         <Insets bottom="10.0" top="10.0" />
+      </padding>
+   </HBox>
+</VBox>
